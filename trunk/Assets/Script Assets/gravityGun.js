@@ -1,9 +1,9 @@
-var spring = 500.0;
+var spring = 1000.0;
 var damper = 5.0;
 var drag = 10.0;
 var angularDrag = 5.0;
-var distance = 0.05;
-var attachToCenterOfMass = false;
+var distance = 0.5;
+var attachToCenterOfMass = true;
 
 private var springJoint : SpringJoint;
 
