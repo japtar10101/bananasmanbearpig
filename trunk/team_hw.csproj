@@ -49,6 +49,7 @@
      <Compile Include="Assets\Standard Assets\Water\Sources\WaterSimple.cs" />
      <None Include="Assets\Standard Assets\Blob-Shadow\ShadowProjection.shader" />
      <None Include="Assets\Standard Assets\Water\Sources\FX-Water Simple.shader" />
+     <None Include="Assets\Script Assets\gravityGun.js" />
      <None Include="Assets\Standard Assets\Camera Scripts\MouseOrbit.js" />
      <None Include="Assets\Standard Assets\Camera Scripts\SmoothFollow.js" />
      <None Include="Assets\Standard Assets\Camera Scripts\SmoothLookAt.js" />
