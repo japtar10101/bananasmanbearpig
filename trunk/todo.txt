@@ -1,0 +1,15 @@
+SCRIPTS
+	objects to be pulled to player
+	limit on range
+	mouse locking / alternatives
+	grappling extension is a powerup
+
+ART
+	gravity/grappling gun
+	Modeling
+
+OTHER
+	Game design document/crap
+	Level layout
+	Level select screen
+	Win/Failure condition
