@@ -1,9 +1,10 @@
-var spring = 1000.0;
+var spring = 500.0;
 var damper = 5.0;
-var drag = 10.0;
+var drag = 20.0;
 var angularDrag = 5.0;
-var distance = 0.5;
-var attachToCenterOfMass = true;
+var springMaxDistance = 0.05;
+var detectionDistance = 50;
+var attractionDistance = 5;
 
 private var springJoint : SpringJoint;
 
@@ -15,7 +16,7 @@ function Update ()
 		
 	// We need to actually hit an object
 	var hit : RaycastHit;
-	if (!Physics.Raycast(mainCamera.ScreenPointToRay(Vector3(mainCamera.pixelWidth/2, mainCamera.pixelHeight/2,0)),  hit, 5))
+	if (!Physics.Raycast(mainCamera.ScreenPointToRay(Vector3(mainCamera.pixelWidth/2, mainCamera.pixelHeight/2,0)),  hit, detectionDistance))
 		return;
 	// We need to hit a rigidbody that is not kinematic
 	if (!hit.rigidbody || hit.rigidbody.isKinematic)
@@ -37,23 +38,14 @@ function Update ()
 	}
 	
 	springJoint.transform.position = hit.point;
-	if (attachToCenterOfMass)
-	{
-		var anchor = transform.TransformDirection(hit.rigidbody.centerOfMass) + hit.rigidbody.transform.position;
-		anchor = springJoint.transform.InverseTransformPoint(anchor);
-		springJoint.anchor = anchor;
-	}
-	else
-	{
-		springJoint.anchor = Vector3.zero;
-	}
+	springJoint.anchor = Vector3.zero;
 	
 	springJoint.spring = spring;
 	springJoint.damper = damper;
-	springJoint.maxDistance = distance;
+	springJoint.maxDistance = springMaxDistance;
 	springJoint.connectedBody = hit.rigidbody;
 	
-	StartCoroutine ("DragObject", hit.distance);
+	StartCoroutine ("DragObject", attractionDistance);
 }
 
 function DragObject (distance : float)
