@@ -4,8 +4,10 @@ var drag = 20.0;
 var angularDrag = 5.0;
 var springMaxDistance = 0.05;
 var detectionDistance = 50;
-var attractionDistance = 5;
+var attractionDistance = 3;
+var repulsionDistance = 5;
 
+//private var holding = false;
 private var springJoint : SpringJoint;
 
 function Update ()
@@ -25,9 +27,10 @@ function Update ()
 	hit.rigidbody.renderer.material.color.r = 1.0;
 	hit.rigidbody.renderer.material.color.g = 0;
 	hit.rigidbody.renderer.material.color.b = 0;
-		
-	if (!Input.GetMouseButtonDown (0))
-	return;
+	
+	var leftButton = Input.GetMouseButtonDown(0);
+	if (!leftButton)
+		return;
 	
 	if (!springJoint)
 	{
@@ -45,7 +48,12 @@ function Update ()
 	springJoint.maxDistance = springMaxDistance;
 	springJoint.connectedBody = hit.rigidbody;
 	
-	StartCoroutine ("DragObject", attractionDistance);
+	//if(leftButton) {
+		StartCoroutine ("DragObject", attractionDistance);
+		//holding = true;
+	//} else {
+	//	DragObject(repulsionDistance);
+	//}
 }
 
 function DragObject (distance : float)
