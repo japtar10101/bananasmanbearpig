@@ -1,7 +1,8 @@
 SCRIPTS
-	objects to be pulled to player
-	limit on range
-	mouse locking / alternatives
+	* objects to be pulled to player
+	objects repelled player
+	* limit on range
+	* mouse locking / alternatives
 	grappling extension is a powerup
 
 ART
