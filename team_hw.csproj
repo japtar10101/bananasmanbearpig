@@ -52,6 +52,7 @@
      <None Include="Assets\Script Assets\grapplingGun.js" />
      <None Include="Assets\Script Assets\gravityGun.js" />
      <None Include="Assets\Script Assets\lockScreen.js" />
+     <None Include="Assets\Script Assets\ModifiedFPSWalker.js" />
      <None Include="Assets\Script Assets\restoreColor.js" />
      <None Include="Assets\Standard Assets\Camera Scripts\MouseOrbit.js" />
      <None Include="Assets\Standard Assets\Camera Scripts\SmoothFollow.js" />

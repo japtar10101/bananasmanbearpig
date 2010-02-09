@@ -22,7 +22,6 @@ function FixedUpdate() {
 	hit.rigidbody.renderer.material.color.b = 0.0;
 	
 	// Make sure the user pressed the mouse down
-	/*
 	if (Input.GetMouseButtonDown(0))
 		StartCoroutine ("Grappling");
 }
@@ -32,23 +31,24 @@ function Grappling ()
 	var mainCamera = FindCamera();
 	var ray : Ray;
 	var controller : CharacterController;
+	controller = GetComponent(CharacterController);
 	
 	//Loop while holding the left button
 	while (Input.GetMouseButton (0))
 	{
+	/*
 		ray = mainCamera.ScreenPointToRay (Vector3(mainCamera.pixelWidth/2, mainCamera.pixelHeight/2,0));
-		controller = GetComponent(CharacterController);
 		moveDirection = ray.GetPoint(endDistance) - controller.center;
 		
 		// We are grounded, so recalculate movedirection directly from axes
 		moveDirection = ray.GetPoint(endDistance);
 		moveDirection = transform.TransformDirection(moveDirection);
 		moveDirection *= speed;
-		
+		*/
+		moveDirection = new Vector3(0,1,0);
 		// Move the controller
 		controller.Move(moveDirection * Time.deltaTime);
 	}
-*/
 }
 
 function FindCamera ()
