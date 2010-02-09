@@ -56,7 +56,7 @@ function Gravity ()
 	var mainCamera = FindCamera();
 	var ray : Ray;
 	
-	//Loop while holding he left button
+	//Loop while holding the left button
 	while (Input.GetMouseButton (0))
 	{
 		ray = mainCamera.ScreenPointToRay (Vector3(mainCamera.pixelWidth/2, mainCamera.pixelHeight/2,0));
