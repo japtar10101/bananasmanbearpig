@@ -1,9 +1,9 @@
-var spring = 500.0;
+var spring = 300.0;
 var damper = 5.0;
-var drag = 20.0;
+var drag = 10.0;
 var angularDrag = 5.0;
-var springMaxDistance = 0.05;
-var detectionDistance = 50;
+var springMaxDistance = 0.5;
+var detectionDistance = 30;
 var attractionDistance = 3;
 
 private var springJoint : SpringJoint;
@@ -21,15 +21,11 @@ function Update ()
 	// We need to hit a rigidbody that is not kinematic
 	if (!hit.rigidbody || hit.rigidbody.isKinematic)
 		return;
-	
-	hit.rigidbody.renderer.material.color.r = 1.0;
-	hit.rigidbody.renderer.material.color.g = 0;
-	hit.rigidbody.renderer.material.color.b = 0;
-	
-	var leftButton = Input.GetMouseButtonDown(0);
-	if (!leftButton)
-		return;
-	
+	// Turn the object red
+	hit.rigidbody.renderer.material.color.r = 1.0; 
+	hit.rigidbody.renderer.material.color.g = 0.0; 
+	hit.rigidbody.renderer.material.color.b = 0.0; 
+	if (!Input.GetMouseButtonDown(0)) return;	
 	if (!springJoint)
 	{
 		var go = new GameObject("Rigidbody dragger");
