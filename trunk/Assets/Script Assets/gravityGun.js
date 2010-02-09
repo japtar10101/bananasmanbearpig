@@ -62,13 +62,24 @@ function Gravity ()
 		ray = mainCamera.ScreenPointToRay (Vector3(mainCamera.pixelWidth/2, mainCamera.pixelHeight/2,0));
 		springJoint.transform.position = ray.GetPoint(attractionDistance);
 		yield;
+		if(Input.GetKey("f")){
+			ray = mainCamera.ScreenPointToRay (Vector3(mainCamera.pixelWidth/2, mainCamera.pixelHeight/2,0));
+			springJoint.transform.position = ray.GetPoint(repulsionDistance);
+			yield;
+			
+			// remove the joints
+			springJoint.connectedBody.drag = oldDrag;
+			springJoint.connectedBody.angularDrag = oldAngularDrag;
+			springJoint.connectedBody = null;
+			return;
+		}
 	}
 	if (springJoint.connectedBody)
 	{
 		// repel the object once we stop holding the mouse button
-		ray = mainCamera.ScreenPointToRay (Vector3(mainCamera.pixelWidth/2, mainCamera.pixelHeight/2,0));
+		/*ray = mainCamera.ScreenPointToRay (Vector3(mainCamera.pixelWidth/2, mainCamera.pixelHeight/2,0));
 		springJoint.transform.position = ray.GetPoint(repulsionDistance);
-		yield;
+		yield;*/
 		
 		// remove the joints
 		springJoint.connectedBody.drag = oldDrag;
