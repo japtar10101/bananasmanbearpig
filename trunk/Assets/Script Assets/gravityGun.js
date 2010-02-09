@@ -5,9 +5,7 @@ var angularDrag = 5.0;
 var springMaxDistance = 0.05;
 var detectionDistance = 50;
 var attractionDistance = 3;
-var repulsionDistance = 5;
 
-//private var holding = false;
 private var springJoint : SpringJoint;
 
 function Update ()
@@ -48,15 +46,10 @@ function Update ()
 	springJoint.maxDistance = springMaxDistance;
 	springJoint.connectedBody = hit.rigidbody;
 	
-	//if(leftButton) {
-		StartCoroutine ("DragObject", attractionDistance);
-		//holding = true;
-	//} else {
-	//	DragObject(repulsionDistance);
-	//}
+	StartCoroutine ("DragObject", attractionDistance);
 }
 
-function DragObject (distance : float)
+function DragObject ()
 {
 	var oldDrag = springJoint.connectedBody.drag;
 	var oldAngularDrag = springJoint.connectedBody.angularDrag;
@@ -66,7 +59,7 @@ function DragObject (distance : float)
 	while (Input.GetMouseButton (0))
 	{
 		var ray = mainCamera.ScreenPointToRay (Vector3(mainCamera.pixelWidth/2, mainCamera.pixelHeight/2,0));
-		springJoint.transform.position = ray.GetPoint(distance);
+		springJoint.transform.position = ray.GetPoint(attractionDistance);
 		yield;
 	}
 	if (springJoint.connectedBody)
