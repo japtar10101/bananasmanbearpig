@@ -6,6 +6,7 @@ var springMaxDistance = 0.5;
 var detectionDistance = 30;
 var attractionDistance = 3;
 var repulsionDistance = 10;
+var oldhit;
 
 private var springJoint : SpringJoint;
 
@@ -14,6 +15,11 @@ function Update ()
 	// We need to actually hit an object
 	var mainCamera = FindCamera();
 	var hit : RaycastHit;
+		if(oldhit != null){
+		oldhit.rigidbody.renderer.material.color.r = 1.0; 
+		oldhit.rigidbody.renderer.material.color.g = 1.0; 
+		oldhit.rigidbody.renderer.material.color.b = 1.0;
+	}
 	if (!Physics.Raycast(mainCamera.ScreenPointToRay(Vector3(mainCamera.pixelWidth/2, mainCamera.pixelHeight/2,0)),  hit, detectionDistance))
 		return;
 	
@@ -25,6 +31,8 @@ function Update ()
 	hit.rigidbody.renderer.material.color.r = 1.0; 
 	hit.rigidbody.renderer.material.color.g = 0.0; 
 	hit.rigidbody.renderer.material.color.b = 0.0;
+	
+	oldhit = hit;
 	
 	// Make sure the user pressed the mouse down
 	if (!Input.GetMouseButtonDown(0)) return;	
@@ -73,6 +81,7 @@ function Gravity ()
 			springJoint.connectedBody = null;
 			return;
 		}
+		
 	}
 	if (springJoint.connectedBody)
 	{
