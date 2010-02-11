@@ -1,6 +1,6 @@
 
-var locked = true;
-var lastclicked = false;
+private var locked = true;
+private var lastclicked = false;
 
 
 function Update () {
