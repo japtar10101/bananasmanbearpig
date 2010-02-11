@@ -55,6 +55,8 @@
      <None Include="Assets\Script Assets\levelSelecter.js" />
      <None Include="Assets\Script Assets\lockScreen.js" />
      <None Include="Assets\Script Assets\ModifiedFPSWalker.js" />
+     <None Include="Assets\Script Assets\nonInteractable.js" />
+     <None Include="Assets\Script Assets\win.js" />
      <None Include="Assets\Standard Assets\Camera Scripts\MouseOrbit.js" />
      <None Include="Assets\Standard Assets\Camera Scripts\SmoothFollow.js" />
      <None Include="Assets\Standard Assets\Camera Scripts\SmoothLookAt.js" />
