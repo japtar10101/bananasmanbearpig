@@ -22,6 +22,9 @@ function Update ()
 	}
 	if (!Physics.Raycast(mainCamera.ScreenPointToRay(Vector3(mainCamera.pixelWidth/2, mainCamera.pixelHeight/2,0)),  hit, detectionDistance))
 		return;
+		
+	if(hit.collider.GetComponent(nonInteractable) != null)
+		return;
 	
 	// We need to hit a rigidbody that is not kinematic
 	if (!hit.rigidbody || hit.rigidbody.isKinematic)
