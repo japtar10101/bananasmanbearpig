@@ -49,7 +49,6 @@
      <Compile Include="Assets\Standard Assets\Water\Sources\WaterSimple.cs" />
      <None Include="Assets\Standard Assets\Blob-Shadow\ShadowProjection.shader" />
      <None Include="Assets\Standard Assets\Water\Sources\FX-Water Simple.shader" />
-     <None Include="Assets\Script Assets\grapplingGun.js" />
      <None Include="Assets\Script Assets\gravityGun.js" />
      <None Include="Assets\Script Assets\levelInstantiate.js" />
      <None Include="Assets\Script Assets\levelSelecter.js" />
