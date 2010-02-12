@@ -76,9 +76,7 @@ function Gravity ()
 		if(Input.GetKey("f")){
 			ray = mainCamera.ScreenPointToRay (Vector3(mainCamera.pixelWidth/2, mainCamera.pixelHeight/2,0));
 			springJoint.transform.position = ray.GetPoint(repulsionDistance);
-			yield;
-			yield;
-			yield;
+			yield WaitForSeconds (.05);
 			
 			// remove the joints
 			springJoint.connectedBody.drag = oldDrag;
