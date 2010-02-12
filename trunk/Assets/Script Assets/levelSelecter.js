@@ -1,15 +1,15 @@
-var levelNames : String[] = ["testing", "gap"];
+var levelNames : String[] = ["testing", "gap", "testing", "testing"];
 var title : String = "Select a level";
-var buttonHeight : int = 30;
-var buttonGap : int = 10;
-var buttonWidth : int = 80;
+var buttonGap : int = 20;
 
 private var numLevels : int = levelNames.length;
-private var groupWidth : int = buttonWidth + 20;
-private var groupHeight : int = buttonHeight * (numLevels + 1) + buttonGap * (numLevels + 1);
 
 function OnGUI () {
-	var shiftLeft : int = Screen.width / 2 - groupWidth / 2;
+	var buttonWidth : int = Screen.width / 2;
+	var buttonHeight : int = Screen.height / (numLevels) - buttonGap * (numLevels);
+	var groupWidth : int = buttonWidth + 20;
+	var groupHeight : int = buttonHeight * (numLevels) + buttonGap * (numLevels + 1);
+	var shiftLeft : int = buttonWidth - groupWidth / 2;
 	var shiftUp : int = Screen.height / 2 - groupHeight / 2;
 
 	// Make a group on the center of the screen
@@ -20,7 +20,7 @@ function OnGUI () {
 	GUI.Box (Rect (0,0,groupWidth,groupHeight), title);
 	
 	// Position all the buttons
-	var y = buttonHeight; var x = 10;
+	var y = buttonGap; var x = 10;
 	for( var i = 0; i < numLevels; ++i ) {
 		var levelName = levelNames[i];
 		if(GUI.Button (Rect (x, y,buttonWidth,buttonHeight), levelName)) {
