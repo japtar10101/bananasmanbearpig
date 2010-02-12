@@ -9,6 +9,9 @@ var grapplevector = Vector3.zero;
 function FixedUpdate() {
 	// We are grounded, so recalculate movedirection directly from axes
 	var oldy = moveDirection.y;
+	if(grounded) {
+		oldy = 0;
+	}
 	moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 	moveDirection = transform.TransformDirection(moveDirection);
 	moveDirection *= speed;

@@ -1,4 +1,4 @@
-var levelNames : String[] = ["testing", "gap", "testing", "testing"];
+var levelNames : String[] = ["level1", "testing"];
 var title : String = "Select a level";
 var buttonGap : int = 20;
 
