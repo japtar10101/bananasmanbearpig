@@ -1,0 +1,10 @@
+Player: init engine
+Direct3D:
+    Version:  Direct3D 9.0c [ati2dvag.dll 6.14.10.6925]
+    Renderer: ATI Mobility Radeon X1400
+    Vendor:   ATI
+    VRAM:     512 MB
+desktop: 1400x1050 60Hz; virtual: 1400x1050 at 0,0
+             Total Object count 263 (Before unload 246)
+Total Object count 270 (Before unload 280)
+Cleanup player
