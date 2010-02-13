@@ -1,9 +1,0 @@
-Player: init engine
-Direct3D:
-    Version:  Direct3D 9.0c [nvd3dum.dll 8.16.11.8694]
-    Renderer: NVIDIA Quadro FX 570M
-    Vendor:   NVIDIA
-    VRAM:     256 MB
-desktop: 1680x1050 60Hz; virtual: 1680x1050 at 0,0
-             Total Object count 296 (Before unload 286)
-Cleanup player
