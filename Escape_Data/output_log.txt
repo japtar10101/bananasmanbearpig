@@ -1,0 +1,35 @@
+Player: init engine
+Direct3D:
+    Version:  Direct3D 9.0c [ati2dvag.dll 6.14.10.6925]
+    Renderer: ATI Mobility Radeon X1400
+    Vendor:   ATI
+    VRAM:     512 MB
+desktop: 1400x1050 60Hz; virtual: 1400x1050 at 0,0
+             Total Object count 257 (Before unload 241)
+Total Object count 269 (Before unload 291)
+Total Object count 309 (Before unload 305)
+Total Object count 271 (Before unload 281)
+The tree water plane must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename: ..\..\Runtime\Terrain\TreeDatabase.cpp Line: 61)
+
+The tree water plane must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+UnityEngine.TerrainData:RefreshTreePrototypes()
+UnityEngine.TerrainData:RefreshTreePrototypes()
+UnityEngine.Terrain:OnEnable()
+
+[..\..\Runtime\Terrain\TreeDatabase.cpp line 61] 
+(Filename: ..\..\Runtime\Terrain\TreeDatabase.cpp Line: 61)
+
+Total Object count 260 (Before unload 252)
+     The tree water plane must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+UnityEngine.TerrainData:RefreshTreePrototypes()
+UnityEngine.TerrainData:RefreshTreePrototypes()
+UnityEngine.Terrain:Flush()
+UnityEngine.Terrain:OnDisable()
+
+[..\..\Runtime\Terrain\TreeDatabase.cpp line 61] 
+(Filename: ..\..\Runtime\Terrain\TreeDatabase.cpp Line: 61)
+
+Total Object count 298 (Before unload 313)
+Cleanup player
