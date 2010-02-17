@@ -14,3 +14,7 @@ OTHER
 	Level layout
 	Level select screen
 	Win/Failure condition
+
+FORGOTTEN
+	Level 3's block's audio pitch needs to be lowered
+	Credit's font audio pitch should be variable to text size
